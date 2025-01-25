@@ -1,0 +1,79 @@
+explanations,class,type,optional,name,showif,label,choice1,choice2,choice3,choice4,choice5,choice6,choice7,choice8,choice9,choice10,choice11,choice12,choice13,choice14,value
+,,note,,carac02,,# **Módulo A. Caracterización Inicial**,,,,,,,,,,,,,,,
+,mc_vertical answer_below_label,mc,,carac_a04,,**A4. ¿Se considera perteneciente a alguno de los siguientes pueblos originarios?**,Mapuche,Aimara,Rapa Nui,Quechua,"No, a ninguno de los anteriores
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,
+,mc_vertical answer_below_label,mc,,carac_a05,,**A5. ¿Cómo se declara usted en términos religiosos? Indique una de las siguientes opciones.**,Católico,Evangélico,"Protestante (iglesias luterana, anglicana, presbiteriana)",Judío,Creyente no adherente,Ateo,Agnóstico,"Ninguna
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,
+,mc_vertical answer_below_label,mc,,carac_a06,,**A6. Aproximadamente ¿cuántos libros hay en su hogar?**,Entre 0 y 10 libros,Entre 11 y 25 libros,Entre 26 y 100 libros,Entre 101 y 200 libros,Entre 201 y 500 libros,"Más de 500 libros
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,
+,mc_vertical answer_below_label,mc,,carac_a07,,"**A7. Durante su educación escolar, ¿a qué tipo de colegio asistió durante más tiempo?**",Colegio municipial,Colegio particular subvencionado,"Colegio particular
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,,
+,mc_vertical answer_below_label,mc,,carac_a08,,"**A8. Tradicionalmente, en general la gente define las posiciones políticas como más cercanas a la izquierda, al centro o a la derecha. Por favor, indique, ¿con cuál de las siguientes posiciones usted se identifica o simpatiza más?**",Derecha,Centro derecha,Centro,Centro izquierda,Izquierda,Independiente,"Ninguna
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,
+,mc_vertical answer_below_label,mc,,carac_a09,,"**A9. Independientemente de su posición política, ¿Ud. aprueba o desaprueba la forma como Gabriel Boric está conduciendo su gobierno?**",Aprueba,"Desaprueba
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,,,
+,mc_vertical answer_below_label,mc many_choices,,carac_a10,,"**A10. ¿En cuál de los siguientes tramos de ingresos se encuentra su hogar?**
+
+**Para responder, considere los ingresos líquidos por sueldos y salarios de todas las personas de su hogar que trabajan remuneradamente (incluyendo jubilaciones, pensiones, aportes de parientes o amigos, arriendos y otros).**",,,,,,,,,,,,,,,
+,answer_below_label,number,,carac_a11,,**A11. ¿Cuál el número de personas que viven en su hogar?**,,,,,,,,,,,,,,,
+,mc_vertical answer_below_label,mc,,carac_a12,,**A12. ¿En qué país vivía su madre cuando usted nació?**,Chile,Venezuela,Bolivia,Perú,Colombia,Haití,Ecuador,Argentina,República dominicana,España,Brasil,Cuba,Paraguay,Otro,
+,mc_vertical answer_below_label,mc,,carac_a13,,**A13. ¿Tiene en el hogar alguno de los siguientes artefactos y/o servicios? : Conexión a internet a través de red de fibra óptica**,Si,"No
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,,,
+,mc_vertical answer_below_label,mc,,carac_a14,,**A14. ¿Tiene en el hogar alguno de los siguientes artefactos y/o servicios? : Lavavajillas**,Si,"No
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,,,
+,mc_vertical answer_below_label,mc,,carac_a15,,**A15. ¿Tiene en el hogar alguno de los siguientes artefactos y/o servicios? : Automovil**,Si,"No
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,,,
+,mc_vertical answer_below_label,mc,,carac_a16,,**A16. ¿Tiene en el hogar alguno de los siguientes artefactos y/o servicios? : Servicio doméstico de tiempo completo (4 o más días por semana)**,Si,"No
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,,,
+,,submit,,send03,,Continuar,,,,,,,,,,,,,,,
+,,note,,merit,,# **Módulo B. Meritocracia**,,,,,,,,,,,,,,,
+,,note,,merit_text,,"A continuación, le presentamos una serie de afirmaciones con respecto a las oportunidades y recompensas que tienen las personas en Chile. Por favor, señale su grado de acuerdo o desacuerdo con cada una de ellas.",,,,,,,,,,,,,,,
+,mc_vertical answer_below_label,mc,,merit_01,,"**B1. En Chile, las personas son recompensadas por sus esfuerzos.**",Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,merit_02,,"**B2. En Chile, las personas son recompensadas por su inteligencia y habilidad.**",Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,merit_03,,"**B3. En Chile, a quienes tienen padres ricos les va mucho mejor en la vida.**",Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,merit_04,,"**B4. En Chile, a quienes tienen buenos contactos les va mucho mejor en la vida.**",Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,merit_05,,**B5. Quienes más se esfuerzan deberían obtener mayores recompensas que quienes se esfuerzan menos.**,Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,merit_06,,**B6. Quienes poseen más talento deberían obtener mayores recompensas que quienes poseen menos talento.**,Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,merit_07,,**B7. Está bien que quienes tienen padres ricos les vaya bien en la vida.**,Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,merit_08,,**B8.  Está bien que quienes tienen buenos contactos les vaya bien en la vida.**,Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,merit_09,,"**B9. En Chile, todas las personas tienen las mismas oportunidades para salir adelante.**",Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,merit_10,,"**B10. En Chile, todas las personas obtienen lo que merecen.**",Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,,submit,,send04,,Continuar,,,,,,,,,,,,,,,
+,,note,,des,,# **Módulo C. Actitudes hacia la desigualdad**,,,,,,,,,,,,,,,
+,,note,,des_text1,,Ahora le presentamos una serie de afirmaciones con respecto a los ingresos económicos de las personas ¿Cuán de acuerdo o en desacuerdo está con las siguientes afirmaciones?,,,,,,,,,,,,,,,
+,mc_vertical answer_below_label,mc,,des_01,,**C1. Las diferencias económicas entre ricos y pobres en Chile son demasiado grandes**,Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,des_02,,**C2. Es responsabilidad del gobierno reducir las diferencias económicas entre las personas con altos ingresos y aquellas con bajos ingresos**,Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,des_03,,**C3. Es responsabilidad de las empresas privadas reducir las diferencias económicas entre las personas con altos ingresos y aquellas con bajos ingresos**,Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,answer_below_label,"rating_button 0,10,1",,des_04,,"**C4. Y si tuviera que elegir, en una escala donde 0 es preferencia por el Gobierno y 10 preferencia por las empresas privadas, ¿preferirías que el gobierno o que las empresas privadas estén a cargo de reducir las diferencias económicas entre las personas con altos ingresos y aquellas con bajos ingresos?**",Gobierno,Empresas,,,,,,,,,,,,,
+,mc_vertical answer_below_label,mc,,des_05,,"**C5. Mirando la lista a continuación, ¿quién cree que debería tener la mayor responsabilidad en reducir las diferencias de ingreso entre las personas con altos ingresos y las personas con bajos ingresos? **",Empresas privadas,Gobierno,Sindicatos,Las personas con altos ingresos por sí mismas,Las personas con bajos ingresos por sí mismas,"Las diferencias de ingreso no necesitan ser reducidas
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,
+,answer_below_label,"rating_button 0,6,1",,des_06,,"**C6. En Chile un 10% de los sueldos se descuenta para ahorro previsional (pensiones). Actualmente se está discutiendo una reforma que propone sumar un 6% adicional con cargo al empleador. El principal tema de esta discusión es cómo repartir este 6%: si debería destinarse a un fondo solidario (para disminuir las brechas entre las pensiones), o a las cuentas individuales (para incrementar los ahorros personales de cada trabajador a futuro).** 
+**¿Cómo distribuiría Ud. este 6%? Marque abajo su preferencia, donde 0 significa que nada se asigna a la cuenta individual y todo al fondo solidario, mientras 6 es todo a la cuenta individual y nada al fondo solidario**","Nada a la cuenta individual, 
+todo al fondo solidario","Todo a la cuenta individual, 
+nada al fondo solidario",,,,,,,,,,,,,
+,mc_vertical answer_below_label,mc,,des_07,,**C7. La mayoría de los políticos en Chile no se preocupan acerca de reducir las diferencias en los ingresos entre personas con altos ingresos y las personas con bajos ingresos **,Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,des_08,,**C8. El gobierno debería proveer un estandar de vida decente para las personas desempleadas **,Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,des_09,,**C9. Está bien que en Chile las personas con mayores ingresos puedan tener mejor educación que las personas de ingresos más bajos.**,Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,des_10,,**C10. Está bien que en Chile las personas con mayores ingresos puedan tener mejor acceso a salud que las personas de ingresos más bajos.**,Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,des_11,,**C11. Está bien que en Chile las personas con mayores ingresos puedan tener mejores pensiones que las personas de ingresos más bajos.**,Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,mc_vertical answer_below_label,mc,,des_12,,"**C12. Está bien que las personas más inteligentes y/o talentosas ganen más dinero, aun cuando requieran esforzarse menos para ello**",Muy en desacuerdo,En desacuerdo,De acuerdo,"Muy de acuerdo
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,,,,,,
+,,submit,,send05,,Continuar,,,,,,,,,,,,,,,
