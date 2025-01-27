@@ -203,7 +203,7 @@
     "objectID": "08-codebook.html#instrucciones",
     "href": "08-codebook.html#instrucciones",
     "title": "8  Libro de códigos",
-    "section": "\n8.2 Instrucciones",
+    "section": "8.2 Instrucciones",
     "text": "8.2 Instrucciones\nLos Libros de Códigos que se presentan en la siguiente sección corresponden a una herramienta interactiva que busca presentar de manera eficiente información respecto a las variables que componen la base de datos. Presentamos los ítems por cuestionario para facilitar su comprensión.\nCada libro muestra el código de cada variable, la etiqueta asociada a la variable con la redacción del ítem, y las categorías de respuesta y códigos asociados. Estas corresponden a tres columnas del libro de códigos denominadas name, label y value_label, respectivamente.\nSe puede hacer uso del buscador que se encuentra al principio del libro para encontrar información de manera más rápida. También se pueden usar los buscadores por cada columna, los cuales irán filtrando los datos que contengan el término de búsqueda.\nIncluimos etiquetas de variables en el Libro de Códigos y en las bases de datos. El equipo de EDUMER las diseñó con la intención de describir brevemente el fenómeno o dimensión a medir. La redacción de la pregunta sigue a las etiquetas, incluyendo códigos y categorías de respuesta. En la construcción de la base de datos, ingresamos los códigos de respuesta como valores numéricos y las categorías de respuesta como etiquetas.\nEn la columna value_labels se muestran las categorías de respuesta de cada variable. No obstante, si la variable es numérica o de respuesta abierta (texto), la casilla se mostrará en blanco, ya que no hay ninguna categoría que mostrar. También puede ocurrir el caso que la variable sea numérica, pero tenga disponibles las categorías “88. No Sabe” y “99. No Responde”. En estos casos sólo se visualizarán ambas categorías en el libro de código.",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
@@ -235,6 +235,46 @@
     "title": "8  Libro de códigos",
     "section": "\n8.5 Padres y apoderados",
     "text": "8.5 Padres y apoderados",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "08-codebook.html#caracterización",
+    "href": "08-codebook.html#caracterización",
+    "title": "8  Libro de códigos",
+    "section": "8.3 Caracterización",
+    "text": "8.3 Caracterización",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "08-codebook.html#meritocracia",
+    "href": "08-codebook.html#meritocracia",
+    "title": "8  Libro de códigos",
+    "section": "8.4 Meritocracia",
+    "text": "8.4 Meritocracia",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "08-codebook.html#cohesión-social",
+    "href": "08-codebook.html#cohesión-social",
+    "title": "8  Libro de códigos",
+    "section": "8.5 Cohesión social",
+    "text": "8.5 Cohesión social",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "08-codebook.html#viñetas",
+    "href": "08-codebook.html#viñetas",
+    "title": "8  Libro de códigos",
+    "section": "8.6 Viñetas",
+    "text": "8.6 Viñetas\nEste método permite al investigador comprender el papel de la característica observada de un sujeto ficticio o viñeta en la evaluación del observador externo (Jasso, 1990). Por lo tanto, las evaluaciones se ajustan en función de los atributos de las viñetas (Dülmer, 2016). Asimismo, cada viñeta se describe en términos de características demográficas o socioeconómicas específicas (e.g., sexo, ocupación), que consecuentemente los participantes en la encuesta evalúan. Por razones de eficiencia, cada encuestado evalúa sólo un número limitado de viñetas para garantizar variación entre y dentro de los sujetos en las respuestas esperadas (e.g., diez viñetas ). \nEl diseño del estudio para la muestra en Alemania ya ha sido realizado. Para ello se ha implementado el algoritmo D-Efficient diseñado en el software SAS. Este método permite optimizar el número de viñetas en un procedimiento de dos pasos. Primero, se estima el número óptimo de viñetas dentro del universo factorial, el cual incrementa en la medida en que se incorporan descriptores en las viñetas. Por ejemplo, si tenemos una viñeta que incorpora descripciones sobre   sexo (2), edad (5),educación (4) y background migrante (2), esto nos da un universo factorial de 80 viñetas que deberían ser evaluadas (2x5x4x2). No obstante, este número hace poco factible el estudio, pues es improbable pedirle a una persona evalúe 80 viñetas. Por lo tanto, el algoritmo primero selecciona el número óptimo de viñetas y luego las organiza en blocks garantizando así la ortogonalidad de las características de cada viñeta. Así, se puede disponer de un n más acotado de viñetas anidadas en blocks, siendo estos últimos asignados de manera aleatoria a cada encuestado.",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
     ]

@@ -14,4 +14,3 @@ editor: visual
 ## Imputación y derivación de variables
 
 ## Cálculo y ajustes de factores de expansión
-

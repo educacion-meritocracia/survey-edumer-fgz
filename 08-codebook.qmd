@@ -34,34 +34,264 @@ if (!require("pacman")) install.packages("pacman")
 
 pacman::p_load(tidyverse,
                here, 
-               codebook)
+               codebook,DT, haven, sjlabelled)
 
 options(scipen=999)
 rm(list = ls())
 ```
 
+
+
 ```{r data, include=FALSE}
+file.exists(here("output/data", "data-060125.RData"))
+load(file = here("output/data", "data-060125.RData"))
 
-load(file = here("output", "data", "db_proc_students.RData"))
-load(file = here("output", "data", "db_proc_teachers.RData"))
-load(file = here("output", "data", "db_proc_parents.RData"))
+
+url <- "https://raw.githubusercontent.com/educacion-meritocracia/survey-edumer-fgz/refs/heads/main/input/Cuestionario_edumer.xlsx%20-%20survey.csv"
+
+url2 <- "https://raw.githubusercontent.com/educacion-meritocracia/survey-edumer-fgz/refs/heads/main/input/cohesion%20-%20survey.csv"
+
+
+cuestionario_data <- read_csv(url)
+cuestionario_data2<- read.csv(url2)
+
+
 ```
 
-## Estudiantes
 
-```{r code1, echo=FALSE}
-codebook:::label_browser_static(db_students)
+```{r code 1, echo=FALSE}
+
+#Agregar labels de cuestionario a data 
+
+library(labelled)
+var_label(data$merit_01)
+
+
+cuestionario_data <- cuestionario_data %>% select(name, label)
+
+df<- data.frame(matrix(ncol=nrow(cuestionario_data),nrow= 0))
+colnames(df) <- cuestionario_data$name
+df <- df %>%
+  dplyr::select(starts_with("carac_"), starts_with("merit_"), starts_with("des"))
+                
+# Paso 2: Filtrar 'labels' para incluir solo columnas que existen en 'df'
+filtered_labels <- cuestionario_data %>%
+  filter(name %in% colnames(df))
+# Asignar las etiquetas como atributos solo para columnas existentes
+for (i in seq_along(filtered_labels$name)) {
+  attr(df[[filtered_labels$name[i]]], "label") <- as.character(filtered_labels$label[i]) # Asegurar que sean strings
+}
+
+#Categorías de respuesta para las variables del módulo meritocracia
+for (var in names(df)[grepl("^merit_", names(df))]) {
+  df[[var]] <- set_labels(
+    df[[var]], 
+    labels = c(`1` = "Muy en desacuerdo",
+                           `2` = "En desacuerdo",
+                           `3` = "De acuerdo",
+                           `4` = "Muy de acuerdo",
+                           `5` = "No sé",
+                           `6` = "Preferiría no responder"
+  ))
+  }
+
+#proceso para módulo de cohesión
+
+cuestionario_data2 <- cuestionario_data2 %>% select(name, label)
+
+df1<- data.frame(matrix(ncol=nrow(cuestionario_data2),nrow= 0))
+colnames(df1) <- cuestionario_data2$name
+df1 <- df1 %>%
+  dplyr::select(starts_with("cohesion_"), starts_with("values_"))
+                
+# Paso 2: Filtrar 'labels' para incluir solo columnas que existen en 'df1'
+filtered_labels_cohesion <- cuestionario_data2 %>%
+  filter(name %in% colnames(df1))
+# Asignar las etiquetas como atributos solo para columnas existentes
+for (i in seq_along(filtered_labels_cohesion$name)) {
+  attr(df1[[filtered_labels_cohesion$name[i]]], "label") <-as.character(filtered_labels_cohesion$label[i]) # Asegurar que sean strings
+}
+
+#Categorías de respuesta para las variables del módulo cohesión
+
+for (var in names(df1)[grepl("^cohesion_", names(df))]) {
+  df[[var]] <- set_labels(
+    df[[var]], 
+    labels = c(`1` = "Para nada",
+                           `2` = "Más bien no",
+                           `3` = "En parte",
+                           `4` = "Más bien sí",
+                           `5` = "Totalmente",
+                           `6` = "No sé",
+                           `7` = "Preferiría no responder"
+  ))
+  }
+
 
 ```
 
-## Docentes
+
+
+## Caracterización
 
 ```{r code2, echo=FALSE}
-codebook:::label_browser_static(db_teachers)
+
+
+
+#no son likert las variables des_04, des_05 y des_06
+
+#Categorías de respuesta módulo Caracterización
+
+#carac_a04
+df$carac_a04 <- set_labels(
+    df$carac_a4, labels = c(`1` = "Mapuche",
+                           `2` = "Aimara",
+                           `3` = "Rapa Nui",
+                           `4` = "Quechua",
+                           `5` = "No, a ninguno de los anteriores",
+                           `6`= "No sé",
+                           `7`= "Preferiría no responder"
+                                                  ))
+#carac_a05
+df$carac_a05 <- set_labels(
+    df$carac_a05, labels = c(`1` = "Católico",
+                           `2` = "Evangélico",
+                           `3` = "Protestante",
+                           `4` = "Judío",
+                           `5` = "Creyente no adherente",
+                           `6`= "Agnóstico",
+                           `7`= "Ninguna",
+                           `8`= "No sé",
+                           `9`= "Preferiría no responder"))
+
+#carac_a06
+
+df$carac_a06 <- set_labels(
+    df$carac_a06, labels = c(`1` = "Entre 0 y 10 libros",
+                           `2` = "Entre 11 y 25 libros",
+                           `3` = "Entre 26 y 100 libros",
+                           `4` = "Entre 101 y 200",
+                           `5` = "Entre 201 y 500",
+                           `6`= "Más de 500 libros",
+                           `7`= "No sé",
+                           `8`= "Preferiría no responder"))
+
+
+#carac_a07
+df$carac_a07 <- set_labels(
+    df$carac_a07, labels = c(`1` = "Colegio municipal",
+                           `2` = "Colegio particular subvencionado",
+                           `3` = "Colegio particular",
+                           `4`= "No sé",
+                           `5`= "Preferiría no responder"))
+
+
+#carac_a08
+df$carac_a08 <- set_labels(
+    df$carac_a08, labels = c(`1` = "Derecha",
+                           `2` = "Centro derecha",
+                           `3` = "Centro",
+                           `4` = "Centro izquierda",
+                           `5` = "Izquierda",
+                           `6`= "Independiente",
+                           `7`= "Ninguna",
+                           `8`= "No sé",
+                           `9`= "Preferiría no responder"))
+
+
+#carac_a09
+df$carac_a09 <- set_labels(
+    df$carac_a09, labels = c(`1` = "Aprueba",
+                           `2` = "Desaprueba",
+                           `8`= "No sé",
+                           `9`= "Preferiría no responder"))
+
+
+#carac_a10
+df$carac_a05 <- set_labels(
+    df$carac_a05, labels = c(`1` = "Católico",
+                           `2` = "Evangélico",
+                           `3` = "Protestante",
+                           `4` = "Judío",
+                           `5` = "Creyente no adherente",
+                           `6`= "Agnóstico",
+                           `7`= "Ninguna",
+                           `8`= "No sé",
+                           `9`= "Preferiría no responder"))
+
+#carac_a12
+df$carac_a12 <- set_labels(
+    df$carac_a12, labels = c(`1` = "Chile",
+                           `2` = "Venezuela",
+                           `3` = "Bolivia",
+                           `4` = "Perú",
+                           `5` = "Colombia",
+                           `6`= "Haití",
+                           `7`= "Ecuador",
+                           `8`= "Argentina",
+                           `9`= "República Dominicana",
+                           `10`= "España",
+                           `11`= "Brasil",
+                           `12`= "Cuba",
+                           `13` = "Paraguay",
+                           `14` = "Otro"))
+
+
+#Categorías de respuesta para las variables carac_a13, carac_a14, carac_a15,carac_a16
+
+df <- set_labels(
+    df %>% c(carac_a13,carac_a14,carac_a15,carac_a16), labels = c(`1` = "Sí",
+                           `2` = "No",
+                           `3` = "No sé",
+                           `4` = "Preferiría no responder"))
+
+
+
+
+codebook :: label_browser_static(df)
+
 ```
 
-## Padres y apoderados
+
+## Meritocracia
 
 ```{r code3, echo=FALSE}
-codebook:::label_browser_static(db_parents)
+
+data_meritocracia <- filtered_labels [15:24,]
+
+
+codebook:::label_browser_static(df)
 ```
+
+## Cohesión social
+
+```{r code4, echo=FALSE}
+
+
+data_cohesion <- filtered_labels2 []
+
+codebook:::label_browser_static(data_cohesion)
+
+```
+
+
+
+## Valores sociales 
+
+```{r code5, echo= FALSE}
+
+
+
+
+```
+
+
+## Viñetas
+
+```{r code 6, echo= FALSE}
+
+
+
+
+```
+
