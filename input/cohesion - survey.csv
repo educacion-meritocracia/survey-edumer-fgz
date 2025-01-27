@@ -1,0 +1,90 @@
+explanations,class,type,optional,name,showif,label,choice1,choice2,choice3,choice4,choice5,choice6,choice7,choice8,value,block_order,item_order
+,,calculate,,pid2,,,,,,,,,,,"formr_connect(""kevin.carrasco@ug.uchile.cl"", ""k959371343"")
+cohesion <- formr_raw_results(""cohesion"")
+sessionid <- tail(cohesion$session, n=1)
+inicio <- formr_raw_results(""inicio"")
+inicio <- inicio[complete.cases(inicio[, c(""session"")]), ]
+id <- inicio[inicio$session == sessionid, ]
+id$pid",,
+,,note,,cohesion,,# **Módulo E. Valores sociales**,,,,,,,,,,,
+,,note,,values_intro,,"A continuación se presenta una breve descripción de algunos tipos de personas. Por favor, lea cada una de las descripciones y responda en qué medida ese tipo de persona se parece o no se parece a Ud.
+
+**¿En qué medida piensa usted que se parece a una persona que...?**",,,,,,,,,,,
+,mc_vertical answer_below_label,mc,,values_01,,**E1. Considera que tener ideas originales y creativas es importante. Le gusta hacer las cosas a su manera**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_02,,**E2. Le es importante ser pudiente. Quiere tener mucho dinero y cosas caras.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_03,,**E3. Le parece importante que todo el mundo sea tratado de la misma manera. Cree que todo el mundo debería tener las mismas oportunidades en la vida.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_04,,**E4. Le es importante mostrar sus habilidades. Quiere que todo el mundo le admire por lo que hace.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_05,,**E5. Le es importante vivir en un entorno seguro. Evita cualquier cosa que pueda poner en peligro su seguridad.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_06,,**E6. Le gustan las sorpresas y siempre está buscando hacer cosas nuevas. Le parece importante hacer muchas cosas distintas en la vida.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_07,,"**E7. Cree que las personas deberían hacer lo que se les manda. Cree que deberían obedecer las normas siempre, aunque nadie les vea.**",No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_08,,**E8. Le es importante escuchar a personas que son distintas a sí mismo. Aunque no esté de acuerdo con ellas quiere comprenderlas.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_09,,**E9. Le es importante actuar de manera humilde y modesta. Trata de no llamar la atención.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_10,,**E10. Le es importante divertirse. Le gusta darse caprichos.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_11,,**E11. Le es importante tomar sus propias decisiones sobre qué va a hacer. Le gusta ser libre y no depender de los demás.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_12,,**E12. Le es muy importante ayudar a las personas que tiene a su alrededor. Se preocupa por su bienestar.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_13,,**E13. Le es importante tener éxito. Le gustaría que todo el mundo reconociese sus éxitos.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_14,,**E14. Le es importante que el gobierno le garantice su seguridad frente a todo tipo de amenazas. Quiere un Estado fuerte capaz de defender a sus ciudadanos.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_15,,**E15. Busca aventura y le gusta tomar riesgos. Quiere una vida emocionante.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_16,,**E16. Le es importante comportarse siempre correctamente. Quiere evitar hacer cualquier cosa que puedan decir que está mal.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_17,,**E17. Le es importante hacerse respetar por los demás. Quiere que la gente haga lo que dice.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_18,,**E18. Le es importante ser fiel a sus amigos. Quiere dedicarse a las personas que le son cercanas.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_19,,**E19. Cree firmemente que la gente debería preocuparse por la naturaleza. Considera que cuidar el medio ambiente es importante.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_20,,**E20. Las tradiciones le son importantes. Trata de seguir las costumbres de su religión o de su familia.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,mc_vertical answer_below_label,mc,,values_21,,**E21. Busca cualquier ocasión para divertirse. Le es importante hacer cosas que le proporcionen placer.**,No se parece nada a mí,No se parece a mí,Se parece un poco a mí,Se parece algo a mí,Se parece a mí,"Se parece mucho a mí
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,
+,,submit,,send_cohesion,,Continuar,,,,,,,,,,,
+,,note,,cohesion_2,,# **Módulo F. Cohesión social**,,,,,,,,,,,
+,,note,,cohesion_intro,,"Se pueden tener diferentes puntos de vista sobre cómo deben convivir las personas en una sociedad. ¿Qué tanto está de acuerdo usted con las siguientes afirmaciones?
+
+## Para mí, convivir bien en una sociedad significa que…
+",,,,,,,,,,,
+,mc_vertical answer_below_label,mc,,cohesion_01,,**F1. Todo el mundo tiene un lugar en la sociedad**,Para nada,Más bien no,En parte,Más bien si,"Totalmente
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,
+,mc_vertical answer_below_label,mc,,cohesion_02,,**F2. Cada cual puede desarrollarse libremente según sus capacidades e inclinaciones**,Para nada,Más bien no,En parte,Más bien si,"Totalmente
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,
+,mc_vertical answer_below_label,mc,,cohesion_03,,"**F3. Todos comparten los mismos valores, costumbres y tradiciones**",Para nada,Más bien no,En parte,Más bien si,"Totalmente
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,
+,mc_vertical answer_below_label,mc,,cohesion_04,,**F4. Conviven personas de distintos orígenes culturales**,Para nada,Más bien no,En parte,Más bien si,"Totalmente
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,
+,mc_vertical answer_below_label,mc,,cohesion_05,,**F5. Todo el mundo obedece la ley y el orden**,Para nada,Más bien no,En parte,Más bien si,"Totalmente
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,
+,mc_vertical answer_below_label,mc,,cohesion_06,,**F6. Cada uno puede vivir como quiera**,Para nada,Más bien no,En parte,Más bien si,"Totalmente
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,
+,mc_vertical answer_below_label,mc,,cohesion_07,,**F7. Se debaten las diferencias de opinión y se alcanzan compromisos**,Para nada,Más bien no,En parte,Más bien si,"Totalmente
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,
+,mc_vertical answer_below_label,mc,,cohesion_08,,**F8. Alguien está disponible para guiarte**,Para nada,Más bien no,En parte,Más bien si,"Totalmente
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,
+,mc_vertical answer_below_label,mc,,cohesion_09,,**F9. Las familias y el vecindario están muy unidos**,Para nada,Más bien no,En parte,Más bien si,"Totalmente
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,
+,mc_vertical answer_below_label,mc,,cohesion_10,,**F10. Puedes vivir la vida con libertad e independencia de los demás**,Para nada,Más bien no,En parte,Más bien si,"Totalmente
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,
+,mc_vertical answer_below_label,mc,,cohesion_11,,**F11. Todos tienen las mismas posibilidades de influir en las decisiones políticas**,Para nada,Más bien no,En parte,Más bien si,"Totalmente
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,
+,mc_vertical answer_below_label,mc,,cohesion_12,,**F12. Todo el mundo está dispuesto a autorrestringirse por el bien de la sociedad**,Para nada,Más bien no,En parte,Más bien si,"Totalmente
+<hr style=""width: 50%; margin-left: 0; height: 1px; background-color: rgba(0, 0, 0, 0.1); border: none;"">",No sé,Preferiría no responder,,,,
+,,submit,,send07,,Continuar,,,,,,,,,,,
+,,note,,end_text,,"Sus respuestas han sido registradas, muchas gracias por su colaboración. Seleccione 'Completar encuesta' para volver a Netquest y recibir su recompensa.",,,,,,,,,,,
+,,textarea,*,end_1,,Sugerencias y comentarios,,,,,,,,,,,
+,,submit,,to_study,,"[Completar encuesta](`r paste0(""https://transit.nicequest.com/transit/participation?tp=co_0&c=ok&ticket="", pid2)`)
+
+",,,,,,,,,,,
