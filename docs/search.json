@@ -174,7 +174,7 @@
     "href": "07-etichs.html",
     "title": "7  Ética",
     "section": "",
-    "text": "7.1 Aprobación comité ético",
+    "text": "7.1 Aprobación comité ético\nEl estudio “Meritocracia en la escuela: Fundamentos morales del mercado educativo y sus implicancias para la formación ciudadana en Chile”, correspondiente al FONDECYT N° 1210847, cuenta con aprobación ética del Comité de Ética de la Investigación.\nEl proyecto fue revisado en conformidad con las normativas éticas y los lineamientos establecidos para investigaciones que involucran a seres humanos, y se considera que cumple con los principios éticos fundamentales para la protección, respeto y dignidad de los participantes. En este sentido, se ha garantizado que el proyecto cuente con mecanismos adecuados de consentimiento informado y protección de datos.\nEl comité ha aprobado el protocolo con fecha 28 de mayo de 2021 y se autoriza su ejecución conforme a los términos establecidos en el proyecto original.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ética</span>"
     ]
@@ -184,7 +184,7 @@
     "href": "07-etichs.html#consentimientos-informados",
     "title": "7  Ética",
     "section": "7.2 Consentimientos informados",
-    "text": "7.2 Consentimientos informados",
+    "text": "7.2 Consentimientos informados\nLos participantes del proyecto firmaron un Consentimiento Informado por escrito, en el que se detallan los objetivos del estudio, en qué consiste su participación, qué se hará y cómo se resguardará la información y los datos entregados. Dicho Consentimiento Informado fue firmado el 2021.",
     "crumbs": [
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Ética</span>"
     ]
@@ -273,8 +273,68 @@
     "objectID": "08-codebook.html#viñetas",
     "href": "08-codebook.html#viñetas",
     "title": "8  Libro de códigos",
-    "section": "8.6 Viñetas",
-    "text": "8.6 Viñetas\nEste método permite al investigador comprender el papel de la característica observada de un sujeto ficticio o viñeta en la evaluación del observador externo (Jasso, 1990). Por lo tanto, las evaluaciones se ajustan en función de los atributos de las viñetas (Dülmer, 2016). Asimismo, cada viñeta se describe en términos de características demográficas o socioeconómicas específicas (e.g., sexo, ocupación), que consecuentemente los participantes en la encuesta evalúan. Por razones de eficiencia, cada encuestado evalúa sólo un número limitado de viñetas para garantizar variación entre y dentro de los sujetos en las respuestas esperadas (e.g., diez viñetas ). \nEl diseño del estudio para la muestra en Alemania ya ha sido realizado. Para ello se ha implementado el algoritmo D-Efficient diseñado en el software SAS. Este método permite optimizar el número de viñetas en un procedimiento de dos pasos. Primero, se estima el número óptimo de viñetas dentro del universo factorial, el cual incrementa en la medida en que se incorporan descriptores en las viñetas. Por ejemplo, si tenemos una viñeta que incorpora descripciones sobre   sexo (2), edad (5),educación (4) y background migrante (2), esto nos da un universo factorial de 80 viñetas que deberían ser evaluadas (2x5x4x2). No obstante, este número hace poco factible el estudio, pues es improbable pedirle a una persona evalúe 80 viñetas. Por lo tanto, el algoritmo primero selecciona el número óptimo de viñetas y luego las organiza en blocks garantizando así la ortogonalidad de las características de cada viñeta. Así, se puede disponer de un n más acotado de viñetas anidadas en blocks, siendo estos últimos asignados de manera aleatoria a cada encuestado.",
+    "section": "8.8 Viñetas",
+    "text": "8.8 Viñetas",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "08-codebook.html#módulo-a-caracterización",
+    "href": "08-codebook.html#módulo-a-caracterización",
+    "title": "8  Libro de códigos",
+    "section": "8.3 Módulo A: Caracterización",
+    "text": "8.3 Módulo A: Caracterización",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "08-codebook.html#módulo-b-meritocracia",
+    "href": "08-codebook.html#módulo-b-meritocracia",
+    "title": "8  Libro de códigos",
+    "section": "8.4 Módulo B: Meritocracia",
+    "text": "8.4 Módulo B: Meritocracia\nEn el módulo de meritocracia se realizan preguntas sobre la importancia del mérito en Chile y las oportunidades que da para acceder a mayores recompensas. La instrucción inicial es: “A continuación, le presentamos una serie de afirmaciones con respecto a las oportunidades y recompensas que tienen las personas en Chile. Por favor, señale su grado de acuerdo o desacuerdo con cada una de ellas.”",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "08-codebook.html#módulo-c-actitudes-hacia-la-desigualdad",
+    "href": "08-codebook.html#módulo-c-actitudes-hacia-la-desigualdad",
+    "title": "8  Libro de códigos",
+    "section": "8.5 Módulo C: Actitudes hacia la desigualdad",
+    "text": "8.5 Módulo C: Actitudes hacia la desigualdad\nEn el siguiente módulo, las preguntas están orientadas en torno a las actitudes hacia la desigualdad. La instruccion inicial es: “Ahora le presentamos una serie de afirmaciones con respecto a los ingresos económicos de las personas ¿Cuán de acuerdo o en desacuerdo está con las siguientes afirmaciones?”",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "08-codebook.html#módulo-e-valores-sociales",
+    "href": "08-codebook.html#módulo-e-valores-sociales",
+    "title": "8  Libro de códigos",
+    "section": "8.6 Módulo E: Valores sociales",
+    "text": "8.6 Módulo E: Valores sociales\nEn el módulo e, se presentan tipos de personas, y su grado de similitud con el participante de la encuesta. La instrucción es: A continuación se presenta una breve descripción de algunos tipos de personas. Por favor, lea cada una de las descripciones y responda en qué medida ese tipo de persona se parece o no se parece a Ud. ¿En qué medida piensa usted que se parece a una persona que…?",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "08-codebook.html#módulo-f-cohesión-social",
+    "href": "08-codebook.html#módulo-f-cohesión-social",
+    "title": "8  Libro de códigos",
+    "section": "8.7 Módulo F: Cohesión social",
+    "text": "8.7 Módulo F: Cohesión social\nEl siguiente módulo realiza una serie de preguntas sobre convivencia con el resto de personas dentro de la sociedad. La instrucción inicial es: Se pueden tener diferentes puntos de vista sobre cómo deben convivir las personas en una sociedad. ¿Qué tanto está de acuerdo usted con las siguientes afirmaciones? Para mí convivir bien en una sociedad significa que…",
+    "crumbs": [
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
+    ]
+  },
+  {
+    "objectID": "08-codebook.html#módulo-a-caracterización-inicial",
+    "href": "08-codebook.html#módulo-a-caracterización-inicial",
+    "title": "8  Libro de códigos",
+    "section": "8.3 Módulo A: Caracterización inicial",
+    "text": "8.3 Módulo A: Caracterización inicial\nEn el primer módulo, las preguntas van en la línea de caracterizar a los participantes de la encuesta. Este primer módulo da paso ordenar a los participantes según cuotas.",
     "crumbs": [
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Libro de códigos</span>"
     ]

@@ -40,8 +40,6 @@ options(scipen=999)
 rm(list = ls())
 ```
 
-
-
 ```{r data, include=FALSE}
 file.exists(here("output/data", "data-060125.RData"))
 load(file = here("output/data", "data-060125.RData"))
@@ -58,14 +56,9 @@ cuestionario_data2<- read.csv(url2)
 
 ```
 
-
 ```{r code 1, echo=FALSE}
 
 #Agregar labels de cuestionario a data 
-
-library(labelled)
-var_label(data$merit_01)
-
 
 cuestionario_data <- cuestionario_data %>% select(name, label)
 
@@ -114,9 +107,9 @@ for (i in seq_along(filtered_labels_cohesion$name)) {
 
 #Categorías de respuesta para las variables del módulo cohesión
 
-for (var in names(df1)[grepl("^cohesion_", names(df))]) {
-  df[[var]] <- set_labels(
-    df[[var]], 
+for (var in names(df1)[grepl("^cohesion_", names(df1))]) {
+  df1[[var]] <- set_labels(
+    df1[[var]], 
     labels = c(`1` = "Para nada",
                            `2` = "Más bien no",
                            `3` = "En parte",
@@ -127,24 +120,11 @@ for (var in names(df1)[grepl("^cohesion_", names(df))]) {
   ))
   }
 
-
-```
-
-
-
-## Caracterización
-
-```{r code2, echo=FALSE}
-
-
-
-#no son likert las variables des_04, des_05 y des_06
-
-#Categorías de respuesta módulo Caracterización
+#Categorías de respuesta para módulo de caracterización
 
 #carac_a04
 df$carac_a04 <- set_labels(
-    df$carac_a4, labels = c(`1` = "Mapuche",
+    df$carac_a04, labels = c(`1` = "Mapuche",
                            `2` = "Aimara",
                            `3` = "Rapa Nui",
                            `4` = "Quechua",
@@ -165,7 +145,6 @@ df$carac_a05 <- set_labels(
                            `9`= "Preferiría no responder"))
 
 #carac_a06
-
 df$carac_a06 <- set_labels(
     df$carac_a06, labels = c(`1` = "Entre 0 y 10 libros",
                            `2` = "Entre 11 y 25 libros",
@@ -208,8 +187,8 @@ df$carac_a09 <- set_labels(
 
 
 #carac_a10
-df$carac_a05 <- set_labels(
-    df$carac_a05, labels = c(`1` = "Católico",
+df$carac_a10 <- set_labels(
+    df$carac_a10, labels = c(`1` = "Católico",
                            `2` = "Evangélico",
                            `3` = "Protestante",
                            `4` = "Judío",
@@ -218,6 +197,8 @@ df$carac_a05 <- set_labels(
                            `7`= "Ninguna",
                            `8`= "No sé",
                            `9`= "Preferiría no responder"))
+
+#carac_a11 es respuesta abierta, así que no tiene value_labels
 
 #carac_a12
 df$carac_a12 <- set_labels(
@@ -239,59 +220,149 @@ df$carac_a12 <- set_labels(
 
 #Categorías de respuesta para las variables carac_a13, carac_a14, carac_a15,carac_a16
 
-df <- set_labels(
-    df %>% c(carac_a13,carac_a14,carac_a15,carac_a16), labels = c(`1` = "Sí",
-                           `2` = "No",
-                           `3` = "No sé",
-                           `4` = "Preferiría no responder"))
+vars_etiquetar <- c("carac_a13","carac_a14","carac_a15","carac_a16")
+
+for (var in vars_etiquetar) {
+  df[[var]] <- set_labels(df[[var]], labels = c(
+    `1` = "Sí",
+    `2` = "No",
+    `3` = "No sé",
+    `4` = "Preferiría no responder"
+  ))
+}
+
+
+#categorías de respuesta módulo valores sociales
+
+for (var in names(df1)[grepl("^values_", names(df1))]) {
+  df1[[var]] <- set_labels(
+    df1[[var]], 
+    labels = c(`1` = "No se parece nada a mi",
+                           `2` = "No se parece a mí",
+                           `3` = "Se parece un poco a mí",
+                           `4` = "Se parece algo a mí",
+                           `5` = "Se parece a mí",
+                           `6` = "Se parece mucho a mí",
+                           `7` = "No sé",
+                           `8` = "Preferiría no responder"
+  ))
+  }
 
 
 
+#categorías variables de módulo actitudes hacia la desigualdad
 
-codebook :: label_browser_static(df)
+vars_etiquetar_des <- c("des_01","des_02","des_03","des_07","des_08","des_09","des_10",
+                        "des_11", "des_12")
+
+for (var in vars_etiquetar_des) {
+  df[[var]] <- set_labels(df[[var]], labels = c(
+    `1` = "Muy en desacuerdo",
+    `2` = "En desacuerdo",
+    `3` = "De acuerdo",
+    `4` = "Muy de acuerdo",
+    `5` = "No sé",
+    `6` = "Preferiría no responder"
+  ))
+}
+
+#des_04
+
+df$des_04 <- set_labels(df$des_04, labels = c(`1`= "Gobierno",
+                                              `2`= "Empresas"))
+
+#des_05
+df$des_05 <- set_labels(df$des_05, labels = c(`1` = "Empresas privadas",
+                                             `2` = "Gobierno",
+                                             `3` = "Sindicatos",
+                                             `4` = "Las personas con altos ingresos por
+                                             sí mismas",
+                                             `5` = "Las personas con bajos ingresos por
+                                             sí mismas",
+                                             `6` = "Las diferencias de ingresos no
+                                             necesitan ser reducidas",
+                                             `7` = "No sé",
+                                             `8` = "Preferiría no responder"))
+
+#des_06
+
+df$des_06 <- set_labels (df$des_06, labels = c(`1`= "Nada a la cuenta individual,todo al fondo solidario", `2`="Todo a la cuenta individual, 
+nada al fondo solidario"))
+
+
 
 ```
 
+## Módulo A: Caracterización inicial
 
-## Meritocracia
+En el primer módulo, las preguntas van en la línea de caracterizar a los participantes de la encuesta. Este primer módulo da paso ordenar a los participantes según cuotas.
+
+```{r code2, echo=FALSE}
+
+var_caracterizacion <- df %>% select(carac_a04,carac_a05, carac_a06,carac_a07,carac_a08,carac_a09,carac_a10,carac_a11,carac_a12,carac_a13,carac_a14)
+
+codebook :: label_browser_static(var_caracterizacion)
+
+```
+
+## Módulo B: Meritocracia
+
+En el módulo de meritocracia se realizan preguntas sobre la importancia del mérito en Chile y las oportunidades que da para acceder a mayores recompensas. La instrucción inicial es: "*A continuación, le presentamos una serie de afirmaciones con respecto a las oportunidades y recompensas que tienen las personas en Chile. Por favor, señale su grado de acuerdo o desacuerdo con cada una de ellas*."
 
 ```{r code3, echo=FALSE}
 
-data_meritocracia <- filtered_labels [15:24,]
+var_meritocracia <- df %>% select(merit_01, merit_02, merit_03,merit_04,
+                                  merit_05,merit_06,merit_07,merit_08,merit_09,merit_10)
 
-
-codebook:::label_browser_static(df)
+codebook:::label_browser_static(var_meritocracia)
 ```
 
-## Cohesión social
+## Módulo C: Actitudes hacia la desigualdad
 
-```{r code4, echo=FALSE}
+En el siguiente módulo, las preguntas están orientadas en torno a las actitudes hacia la desigualdad. La instruccion inicial es: "*Ahora le presentamos una serie de afirmaciones con respecto a los ingresos económicos de las personas ¿Cuán de acuerdo o en desacuerdo está con las siguientes afirmaciones*?"
 
+```{r code4, echo= FALSE}
 
-data_cohesion <- filtered_labels2 []
+var_actitudesdesigualdad <- df %>% select(des_01,des_02,des_03,des_04,des_05,des_06,des_07,des_08,des_09,des_09,des_10,
+                                          des_11,des_12)
 
-codebook:::label_browser_static(data_cohesion)
+codebook :: label_browser_static(var_actitudesdesigualdad)
 
 ```
 
+## Módulo E: Valores sociales
 
-
-## Valores sociales 
+En el módulo e, se presentan tipos de personas, y su grado de similitud con el participante de la encuesta. La instrucción es: *A continuación se presenta una breve descripción de algunos tipos de personas. Por favor, lea cada una de las descripciones y responda en qué medida ese tipo de persona se parece o no se parece a Ud. ¿En qué medida piensa usted que se parece a una persona que...?*
 
 ```{r code5, echo= FALSE}
 
+var_valoressociales <- df1 %>% select(values_01,values_02,values_03,values_04,values_05,
+                                      values_06,values_07,values_08,values_09,values_10,
+                                      values_11,values_12,values_13,values_14,values_15,
+                                      values_17,values_18,values_19,values_20,values_21)
 
-
+codebook:: label_browser_static(var_valoressociales)
 
 ```
 
+## Módulo F: Cohesión social
+
+El siguiente módulo realiza una serie de preguntas sobre convivencia con el resto de personas dentro de la sociedad. La instrucción inicial es: *Se pueden tener diferentes puntos de vista sobre cómo deben convivir las personas en una sociedad. ¿Qué tanto está de acuerdo usted con las siguientes afirmaciones? Para mí convivir bien en una sociedad significa que...*
+
+```{r code6, echo=FALSE}
+
+
+var_cohesion <- df1 %>% select(cohesion_01, cohesion_02,cohesion_03, cohesion_04,cohesion_05,cohesion_06,cohesion_07,cohesion_08,cohesion_09,cohesion_10,cohesion_11,cohesion_12)
+
+codebook:::label_browser_static(var_cohesion)
+
+```
 
 ## Viñetas
 
-```{r code 6, echo= FALSE}
+```{r code 7, echo= FALSE}
 
 
 
 
 ```
-
